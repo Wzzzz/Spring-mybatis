@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<listener>
+		<listener-class>com.qq.qd.peng.servant.impl.AppListener</listener-class>
+	</listener>
+	<service name="WangObj">
+		<home-api>com.qq.qd.server.servant.OrigianBookAPIServant</home-api>
+		<home-class>com.qq.qd.server.Impl.OrigianBookAPIServantImpl</home-class>
+	</service>
+	<service name="HttpWebServiceObj">
+		<home-api>com.qq.cloud.taf.protocol.codec.http.service.HttpWebService</home-api>
+		<home-class>com.qq.qd.peng.servant.tafhttp.HttpServantImpl</home-class>
+	</service>
+</services>

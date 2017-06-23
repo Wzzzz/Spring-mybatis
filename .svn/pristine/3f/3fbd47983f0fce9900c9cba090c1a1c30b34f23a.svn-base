@@ -1,0 +1,7 @@
+module  Servant{
+
+	interface OrigianBookAPI
+	{
+	   string test(long type);
+	};
+};

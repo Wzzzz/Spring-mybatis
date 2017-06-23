@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>qq-central</groupId>
+    <artifactId>jce2java</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>qq-central</groupId>
+                <artifactId>maven-taf-plugin</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <configuration>
+                    <!-- 业务app名称 生成proxy代码时不无需要指定 -->
+                    <appName>QD</appName>
+                    <!-- 业务服务名称 生成proxy代码时不无需要指定 -->
+                    <serverName>WangService</serverName>
+                    <!-- 业务servant名称 生成proxy代码时不无需要指定 -->
+                    <objName>WangObj</objName>
+                    <withServant>true</withServant>
+                    <!--<cloud>true</cloud>-->
+                    <jceFiles>
+                        <jceFile>WEB-INF/jce/callwang.jce</jceFile>
+                    </jceFiles>
+                    <srcPath>WEB-INF/src/java</srcPath>
+                    <jceFileCharset>UTF-8</jceFileCharset>
+                    <packagePrefixName>com.qq.qd.server.</packagePrefixName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

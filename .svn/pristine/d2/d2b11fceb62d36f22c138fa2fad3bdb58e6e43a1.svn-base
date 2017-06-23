@@ -1,0 +1,42 @@
+package com.qq.qd.server.callhiserver.Impl;
+
+
+import com.qq.cloud.taf.client.Communicator;
+import com.qq.cloud.taf.client.CommunicatorConfig;
+import com.qq.cloud.taf.client.CommunicatorFactory;
+
+import com.qq.qd.server.callhiserver.CallHelloWordServant;
+import com.qq.qd.server.hiserver.HelloWordPrx;
+
+/**
+ * Created by wangzhi.a on 2017/6/20.
+ */
+public class CallHelloWordServantImpl implements CallHelloWordServant{
+
+    private static Communicator communicatorwang;
+    private static String SERVANT = "QD.HiServer.HiObj";
+    private static String LOCATOR = "taf.tafregistry.QueryObj@tcp -h 10.119.92.83 -b 10.119.92.83 -p 10074 -a 10071 -t 60000";
+
+    public static HelloWordPrx createHelloWordPrx(){
+    Communicator communicator = getCommunicator(LOCATOR,communicatorwang);
+    HelloWordPrx proxy = communicator.stringToProxy(HelloWordPrx.class, SERVANT);
+    return proxy;
+    }
+
+    @Override
+    public String CallsayHello() {
+    HelloWordPrx proxy = createHelloWordPrx();
+    String resultStr = proxy.sayHello();
+    return resultStr;
+    }
+
+    private static Communicator getCommunicator(String locator, Communicator communicator){
+        if(communicator == null) {
+            CommunicatorConfig config = new CommunicatorConfig();
+            config.setLocator(locator);
+            config.setCharsetName("UTF-8");
+            communicator = CommunicatorFactory.getInstance().getCommunicator(config);
+        }
+        return communicator;
+    }
+}

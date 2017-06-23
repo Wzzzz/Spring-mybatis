@@ -1,0 +1,7 @@
+module CallHiServer {
+
+	interface CallHelloWord
+	{
+	   string CallsayHello();
+	};
+};

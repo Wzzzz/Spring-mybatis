@@ -1,0 +1,33 @@
+package com.qq.qd.server.wangservice.impl;
+
+import com.qq.qd.server.wangservice.WangServant;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+
+/**
+ * Created by wangzhi.a on 2017/6/16.
+ */
+public class WangServantImpl implements WangServant {
+    @Override
+    public String sayHello() {
+        return "Hello!";
+    }
+
+    @Override
+    public String test() {
+        SimpleDateFormat stf = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+        return "Now time:" + stf.format(new Date());
+    }
+
+    @Override
+    public int add(int num) {
+        return num + new Random().nextInt(10000);
+    }
+
+    @Override
+    public String readConfig() {
+        return null;
+    }
+}

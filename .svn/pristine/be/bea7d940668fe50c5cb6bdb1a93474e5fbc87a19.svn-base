@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.qq.qd.server.DAO.OrigianBookDAO">
+
+    <resultMap id="OrigianBookExMap" type="OrigianBookEx">
+        <result property="freetype" column="freetype " />
+        <result property="categoryid" column="categoryid " />
+        <result property="categoryname" column="categoryname " />
+        <result property="bookid" column="bookid " />
+        <result property="pBookid" column="pBookid " />
+        <result property="votesum" column="votesum " />
+        <result property="top" column="top " />
+    </resultMap>
+
+    <select id="getOrigianBookEx" resultMap="OrigianBookExMap">
+        <![CDATA[
+        select * from tbcateqqtopvotesum_ex where freetype = #{freetype};
+        ]]>
+    </select>
+</mapper>

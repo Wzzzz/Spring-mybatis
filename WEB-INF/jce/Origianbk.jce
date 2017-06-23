@@ -1,0 +1,13 @@
+module  Servant {
+
+	interface OrigianBookAPI
+	{
+	   string test(long freetype);
+
+	   string test1(string app_id, long freetype);
+
+	   string test2(string app_id, map<string,string> params);
+
+	   string test3(string app_id);
+	};
+};

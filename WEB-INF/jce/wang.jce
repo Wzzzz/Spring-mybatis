@@ -1,0 +1,7 @@
+module HiServer {
+
+	interface HelloWord
+	{
+	   string sayHello();
+	};
+};

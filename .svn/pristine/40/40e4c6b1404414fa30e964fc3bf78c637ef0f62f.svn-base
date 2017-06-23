@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<listener>
+		<listener-class>com.qq.qd.server.Impl.AppListener</listener-class>
+	</listener>
+	<service name="WangObj">
+		<home-api>com.qq.qd.server.servant.OrigianBookAPIServant</home-api>
+		<home-class>com.qq.qd.server.Impl.OrigianBkAPIImpl</home-class>
+	</service>
+</services>

@@ -1,0 +1,9 @@
+#JDBC
+db_driverClass=com.mysql.jdbc.Driver
+db_jdbcUrl=jdbc:mysql://gamedb.qdsmalldata3.TXWX.db:10020/yw_qdsr_api?autoReconnect=true&failOverReadOnly=false&rewriteBatchedStatements=true&useUnicode=true&characterEncoding=UTF-8
+db_username=qdsr
+db_password=qdsr#0524
+db_connectTimeout=5000
+db_pool_maxtotal=128
+db_pool_minidle=16
+db_testSql=SELECT 1

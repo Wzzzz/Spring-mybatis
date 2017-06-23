@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<service name="WangObj">
+		<!-- jce接口 -->
+		<home-api>com.qq.qd.server.servant.OrigianBookAPIServant</home-api>
+		<!-- jce接口对应接口实现 -->
+		<home-class>com.qq.qd.server.Impl.OrigianBookAPIServantImpl</home-class>
+	</service>
+</services>
